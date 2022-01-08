@@ -46,6 +46,7 @@ public class FileDownloadHandler implements CusHttpHandler {
 
         if (!file.exists()) {
             CusResponseEntity.notFound(exchange);
+            return;
         }
 
         FileInputStream fileInputStream = new FileInputStream(file);

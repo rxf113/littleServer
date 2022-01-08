@@ -44,6 +44,7 @@ public class FileUploadHandler implements CusHttpHandler {
         if (fileItems.size() != 1) {
             //响应400
             CusResponseEntity.badRequest(exchange);
+            return;
         }
         FileItem fileItem = fileItems.get(0);
         String name = fileItem.getName();
